@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_pagetitle}>, <{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_pagetitle}>, <{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="<{$xoops_url}>/backend.php" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_imageurl}>style.css" /> 
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+<!-- xf_GeminiBlue is ported to fit XOOPS by Michael Hokamp [aka studioC] <a href="http://xoopsfactory.com">XOOPS FACTORY</a> -->
+<!-- Original Gemini Blue developed by Root, designed by geeksmakemehot. Author: Jennifer Ledbetter, Author URI: http://geeksmakemehot.com -->
+</head>
+<body>
+<div id="farouter">
+<div id="outer">
+<div id="rap">
+<div id="masthead">
+<h1 id="header"><a href="<{$xoops_url}>"><{$xoops_sitename}></a></h1>
+<h2 id="tagline"><{$xoops_pagetitle}></h2>
+</div>
+<div id="hmenu"><div id="hnav">
+<ul id="navlist">
+<li><a href="<{$xoops_url}>">HOME</a></li><li><a href="<{$xoops_url}>/modules/contact/">CONTACT US</a></li><li><a href="<{$xoops_url}>/modules/newbb">FORUM</a></li>
+</ul>
+</div></div>
+<div id="main"><div id="content<{$xoops_lblocks}><{$xoops_showrblock}>">
+<!-- end id header -->
+<{foreach item=block from=$xoops_clblocks}><{include file="$xoops_theme/blocks/theme_blockcenter_l.html"}><{/foreach}>
+<{foreach item=block from=$xoops_ccblocks}><{include file="$xoops_theme/blocks/theme_blockcenter_c.html"}><{/foreach}>
+<div id="modulcontent"><{$xoops_contents}></div>
+<{foreach item=block from=$xoops_crblocks}><{include file="$xoops_theme/blocks/theme_blockcenter_r.html"}><{/foreach}>
+</div>
+</div>
+<{if $xoops_lblocks == 'Array' OR $xoops_showrblock == 1}> 
+<!-- begin sidebar -->
+<div id="menu">
+<div id="mnav">
+<{if $xoops_lblocks == ''}>
+<{else}>
+<{foreach item=block from=$xoops_lblocks}><{include file="$xoops_theme/blocks/theme_blockleft.html"}><{/foreach}>
+<{/if}>
+<{if $xoops_showrblock == 1}>
+<{foreach item=block from=$xoops_rblocks}><{include file="$xoops_theme/blocks/theme_blockright.html"}><{/foreach}>
+<{/if}>
+</div>
+</div>
+<!-- end sidebar -->
+<{/if}>
+<div id="clearer"></div>
+<!-- begin footer -->
+<div id="footer">
+<p class="credit"><a href="http://geeksmakemehot.com/themes/">Gemini Blue</a> brought to you by <a href="http://geeksmakemehot.com/">geeksmakemehot.com</a>.  Developed by <a href="http://atthe404.com">Root</a>. Designed by <a href="http://geeksmakemehot.com/">geeksmakemehot</a>.<br />
+Ported to fit XOOPS CMS by <a href="http://xoopsfactory.com">XOOPS factory</a>. <cite>Powered by <a href="http://xoops.org" title="XOOPS"><strong>XOOPS</strong></a></cite></p>  
+</div>
+<!-- end footer -->
+</div>
+</div>
+</div>
+</body>
+</html>
